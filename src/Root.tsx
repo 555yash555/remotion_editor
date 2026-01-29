@@ -4,6 +4,7 @@ import { Main } from "./Video/Main";
 import { SoleGoesReel } from "./SoleGoesReel/SoleGoesReel";
 // Import fonts to ensure they're loaded
 import "./SoleGoesReel/config/fonts";
+import { GetCopayHelpComposition } from "./GetCopayHelp/GetCopayHelpComposition";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -24,6 +25,14 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
         defaultProps={{}}
+      />
+      <Composition
+        id="GetCopayHelp"
+        component={GetCopayHelpComposition}
+        durationInFrames={555} // 18.5 seconds * 30fps
+        fps={30}
+        width={1920}
+        height={1080}
       />
     </>
   );
