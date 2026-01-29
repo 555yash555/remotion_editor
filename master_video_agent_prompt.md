@@ -129,7 +129,9 @@ Generate **10-15 Nano Banana prompts** for all illustrations needed (characters,
 
 #### **Audio Assets:**
 - **Music**: Genre (e.g., "Cyberpunk Phonk", "Uplifting Indie-Pop") and Mood
-- **SFX**: Scene-by-scene checklist with sourcing recommendations
+- **SFX**: Scene-by-scene checklist.
+    - **Note to Agent**: First, prioritize using assets from the common library at `public/assets/audio/` (e.g., `click.mp3`, `whoosh.mp3`, `pop.mp3`, `swipe.mp3`).
+    - **Note to Agent**: If specific themed SFX are needed but missing, list them clearly and ask the user to provide/download them.
 
 ---
 
