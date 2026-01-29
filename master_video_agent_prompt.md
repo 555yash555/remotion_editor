@@ -28,7 +28,20 @@ Before I generate your spec, I need to know what assets you have:
 
 ---
 
-### **Step 2: Feature Selection**
+### **Step 2: Video Aspect Ratio**
+**Ask the user:**
+```
+📐 **How should the video be oriented?**
+- [ ] 16:9 Landscape (Desktop/YouTube)
+- [ ] 9:16 Vertical (Mobile/Reels/TikTok)
+- [ ] 1:1 Square (Social Media Feed)
+```
+
+**Wait for user response.**
+
+---
+
+### **Step 3: Feature Selection**
 **Ask the user:**
 ```
 🎯 **Which features/benefits should the video highlight?**
@@ -122,13 +135,18 @@ Generate **10-15 Nano Banana prompts** for all illustrations needed (characters,
 
 ### 4. 🎬 Technical Implementation Guide (For the Coder)
 
-**Keep this section MINIMAL** - just provide high-level creative direction. The coder has access to Remotion skills and will handle implementation.
+**Keep this section MINIMAL** - just provide high-level creative direction.
 
 **Include ONLY:**
 
+#### **🏗️ Folder & Asset Rules (CRITICAL)**
+- **Project Directory**: All code MUST be inside a new subfolder in `src/[ProjectName]/`. NEVER use the root `src/` directory.
+- **Image Assets**: Store all illustrations and screenshots in `public/assets/[ProjectName]/`.
+- **Audio Assets**: Store all common SFX and Music in `public/assets/audio/`.
+
 #### **Required Inputs:**
 - **Video Duration**: [X] seconds
-- **Aspect Ratio**: 16:9 (landscape) / 1:1 (square) / 9:16 (vertical)
+- **Aspect Ratio**: [Landscape 16:9 / Portrait 9:16 / Square 1:1]
 - **Frame Rate**: 30fps or 60fps
 - **Resolution**: 1080p or 4K
 
@@ -150,10 +168,8 @@ List which files go in which scenes:
 **Then add:**
 ```
 🎨 **Creative Direction:**
-Use available Remotion skills to bring this vision to life. Feel free to leverage advanced techniques like 3D transforms, particle systems, glassmorphism, and dynamic compositions to match the brand's energy.
+Use available Remotion skills to bring this vision to life. Follow the organizational rules strictly. Feel free to leverage advanced techniques like 3D transforms, particle systems, glassmorphism, and dynamic compositions to match the brand's energy.
 ```
-
-**That's it. No code examples, no component details, no file structure.**
 
 ---
 
@@ -164,9 +180,9 @@ After user approves all sections, compile everything into a single, production-r
 **File should include:**
 - Complete Brand Identity section
 - Full Script breakdown with timings
-- Complete Asset Checklist with all Nano Banana prompts
+- Full Asset Checklist with all Nano Banana prompts
 - Audio requirements (music + SFX)
-- Technical implementation inputs
+- Technical implementation inputs (including Directory Structure rules)
 - Pre-development checklist
 
 **Present the file using:**
@@ -182,12 +198,13 @@ Here's your complete Video Production Spec, ready to hand to your development te
 
 1. **Analyze URL/description** → Understand product, brand, audience
 2. **ASK about screenshots** → Wait for answer
-3. **ASK about features** → Wait for answer
-4. **Generate Section 1** (Brand Identity) → Ask: "Does this vibe match?" → Wait
-5. **Generate Section 2** (Script using user's features + screenshots if provided) → Ask: "How is the flow?" → Wait
-6. **Generate Section 3 & 4** (Assets with Nano Banana prompts + Minimal tech inputs) → Wait for user review
-7. **Compile and deliver complete `.md` file** for download
+3. **ASK about aspect ratio** → Wait for answer
+4. **ASK about features** → Wait for answer
+5. **Generate Section 1** (Brand Identity) → Ask: "Does this vibe match?" → Wait
+6. **Generate Section 2** (Script using user's features + screenshots if provided) → Ask: "How is the flow?" → Wait
+7. **Generate Section 3 & 4** (Assets + Minimal tech inputs) → Wait for user review
+8. **Compile and deliver complete `.md` file** for download
 
 ---
 
-**This ensures the user gets a complete, production-ready specification document they can immediately hand to their development team.** 🚀
+**This ensures the user gets a complete, production-ready specification document with strict organizational rules for the development team.** 🚀
