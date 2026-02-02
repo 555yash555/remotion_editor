@@ -5,6 +5,8 @@ import { SoleGoesReel } from "./SoleGoesReel/SoleGoesReel";
 // Import fonts to ensure they're loaded
 import "./SoleGoesReel/config/fonts";
 import { GetCopayHelpComposition } from "./GetCopayHelp/GetCopayHelpComposition";
+import { Main as FinkraftMain } from "./Finkraft_Video";
+import { VIDEO_CONFIG } from "./Finkraft_Video/utils/constants";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -33,6 +35,14 @@ export const RemotionRoot: React.FC = () => {
         fps={30}
         width={1920}
         height={1080}
+      />
+      <Composition
+        id="FinkraftVideo"
+        component={FinkraftMain}
+        durationInFrames={VIDEO_CONFIG.durationInFrames}
+        fps={VIDEO_CONFIG.fps}
+        width={VIDEO_CONFIG.width}
+        height={VIDEO_CONFIG.height}
       />
     </>
   );

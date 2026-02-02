@@ -5,8 +5,8 @@
  */
 
 import React from 'react';
-import {AbsoluteFill, useCurrentFrame, interpolate, Easing} from 'remotion';
-import {KineticText} from '../components/KineticText';
+import {AbsoluteFill, useCurrentFrame, interpolate, Easing, Img, staticFile} from 'remotion';
+
 import {BRAND_COLORS, BRAND_FONTS, PREMIUM_EASING} from '../config/brandTokens';
 
 export const Scene11CTAEndCard: React.FC = () => {
@@ -52,35 +52,23 @@ export const Scene11CTAEndCard: React.FC = () => {
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        gap: 40,
+        gap: 0, // Minimized gap to bring tagline closer
         transform: `translate(${shake}px, ${shake}px)`, // Apply shake
       }}
     >
-      {/* Logo text */}
-      <div style={{ opacity: logoOpacity }}>
-        <h1
-          style={{
-            fontSize: 120,
-            fontWeight: 800,
-            fontFamily: BRAND_FONTS.heading,
-            color: BRAND_COLORS.text.primary,
-            margin: 0,
-            letterSpacing: '-2px',
-          }}
-        >
-          SOLEGOES
-        </h1>
-      </div>
-      
-      {/* Tagline */}
-      <KineticText
-        text="SOLO, NOT ALONE."
-        animation="fadeIn"
-        fontSize={48}
-        fontFamily="body"
-        color={BRAND_COLORS.text.secondary}
-        delay={8}
+      {/* Logo Image */}
+      <Img
+        src={staticFile('assets/logos/logo_transparent.png')}
+        style={{
+          opacity: logoOpacity,
+          width: 800,
+          height: 'auto',
+          objectFit: 'contain',
+          marginBottom: -60, // Negative margin to eat up internal PNG whitespace
+        }}
       />
+      
+
       
       {/* CTA Button */}
       <div
@@ -115,7 +103,7 @@ export const Scene11CTAEndCard: React.FC = () => {
       {/* URL typewriter */}
       <div
         style={{
-          marginTop: 10,
+          marginTop: 40, // Increased spacing above URL
           clipPath: `inset(0 ${(1 - urlReveal) * 100}% 0 0)`,
         }}
       >
